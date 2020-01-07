@@ -5,6 +5,18 @@
 <button class="how-pos3 hov3 trans-04 js-hide-modal1">
   <img src="{{ asset('images/icons/icon-close.png') }}" alt="CLOSE">
 </button>
+<script>
+  $('.gallery-lb').each(function() { // the containers for all your galleries
+    $(this).magnificPopup({
+          delegate: 'a', // the selector for gallery item
+          type: 'image',
+          gallery: {
+            enabled:true
+          },
+          mainClass: 'mfp-fade'
+      });
+  });
+</script>
 <div class="row">
   <div class="col-md-6 col-lg-7 p-b-30">
     <div class="p-l-25 p-r-30 p-lr-0-lg">

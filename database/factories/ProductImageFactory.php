@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(ProductImage::class, function (Faker $faker) {
     return [
-        'product_image' => $faker->imageUrl(),
+        'product_image' => 'images/product-01.jpg',
         'order' => $faker->randomDigit()
     ];
 });
