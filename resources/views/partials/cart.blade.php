@@ -16,9 +16,9 @@
     <div class="header-cart-content flex-w js-pscroll">
       @if ( is_array(session()->get('cart')) && count(session()->get('cart')) > 0 )
         <ul class="header-cart-wrapitem w-full">
-          @foreach( session()->get('cart') as $item_cart )
+          @foreach( session()->get('cart') as $key => $item_cart )
             <li class="header-cart-item flex-w flex-t m-b-12">
-              <div class="header-cart-item-img">
+              <div class="header-cart-item-img js-remove-cart-item" data-cart="{{ $key }}" data-product-remove-cart-link="{{ route('productRemoveCart', ['product' => $key]) }}">
                 <img src="{{ $item_cart['image'] }}" alt="{{ $item_cart['product_name'] }}">
               </div>
 

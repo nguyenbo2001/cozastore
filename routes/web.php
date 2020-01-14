@@ -27,3 +27,5 @@ Route::get('/modal-product/{product}', 'ProductController@modalProduct')->name('
 Route::get('/load-more/{current_page}', 'ProductController@loadMore')->name('loadMoreProduct');
 
 Route::post('/product-add-cart/{product}', 'ProductController@addCart')->name('productAddCart');
+
+Route::post('/product-remove-cart/{product}', 'ProductController@removeCart')->name('productRemoveCart');

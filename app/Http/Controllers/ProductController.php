@@ -150,4 +150,12 @@ class ProductController extends Controller
         }
         Session::save();
     }
+
+    public function removeCart($product, Request $request) {
+        $cart = Session::get('cart');
+        if (isset($cart[$product])) {
+            Session::forget('cart.'.$product);
+        }
+        Session::save();
+    }
 }
