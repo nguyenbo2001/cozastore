@@ -26,9 +26,9 @@
 
         <div class="slick3 gallery-lb">
           @foreach ($product->images as $image)
-            <div class="item-slick3" data-thumb="{{ $image->product_image }}">
+            <div class="item-slick3" data-thumb="{{ asset($image->product_image) }}">
               <div class="wrap-pic-w pos-relative">
-                <img src="{{ $image->product_image }}" alt="{{ $product->name }}">
+                <img src="{{ asset($image->product_image) }}" alt="{{ $product->name }}">
 
                 <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{{ $image->product_image }}">
                   <i class="fa fa-expand"></i>
